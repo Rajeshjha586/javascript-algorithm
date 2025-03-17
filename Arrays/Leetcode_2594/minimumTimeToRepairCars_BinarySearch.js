@@ -27,5 +27,5 @@ function isCarsRepaired(time, ranks, carsToBeRepaired) {
   return false;
 }
 
-// Time Complexity:- O(log(max * cars*2 - min)) + O(N);
-// Space complexity:- O(1)
+// Time Complexity: O(N log(maxRank * cars²))
+// Space Complexity: O(1)
