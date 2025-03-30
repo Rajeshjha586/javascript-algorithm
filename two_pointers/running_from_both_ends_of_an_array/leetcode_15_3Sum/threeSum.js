@@ -5,19 +5,19 @@ var threeSum = function (nums) {
 
   let result = [];
   let target = 0;
-
   for (let i = 0; i < nums.length - 2; i++) {
     if (i > 0 && nums[i] === nums[i - 1]) continue;
 
     let left = i + 1;
     let right = nums.length - 1;
+    let newTarget = target - nums[i];
 
     while (left < right) {
-      let sum = nums[i] + nums[left] + nums[right];
+      let sum = nums[left] + nums[right];
 
-      if (sum < target) {
+      if (sum < newTarget) {
         left++;
-      } else if (sum > target) {
+      } else if (sum > newTarget) {
         right--;
       } else {
         result.push([nums[i], nums[left], nums[right]]);
